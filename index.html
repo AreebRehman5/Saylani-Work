@@ -1,41 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script>
-        const people  = [
-                {
-                  name: 'Bilal',
-                  age: 21,
-                  cnic: '42101'
-                },
-                {
-                  name: 'Ahmed',
-                  age: 25,
-                  cnic: '42101'
-                },
-                {
-                  name: 'Aneeq',
-                  age: 41,
-                  cnic: '42101'
-                },
-                {
-                  name: 'Abdul',
-                  age: 33,
-                  cnic: '1234'
-                }
-            ]
-            
-            people.forEach( (element , index) => console.log('index , Element =>', index, element)  )
-            people.map( (element , index) => console.log('index , Element =>', index, element)  )
-    
-            const below30 = people.filter((data)=> data.age < 30 )
-            console.log(below30)
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   
 
-    </script>
-</body>
+    <button id="logout">Logout</button>
+    <div id="blogContainer">
+      <form id="blog-form">
+        <label>Title<input type="text" placeholder="Blog Title" /></label> <br />
+        <label>Description <input type="text" placeholder="Blog Description" /> </label><br />
+       <label><input type="radio" name="level" checked value="Beginner" /> Beginner </label> 
+       <label><input type="radio" name="level" value="Intermediate" /> Intermediate </label> 
+       <label><input type="radio" name="level" value="Expert" /> Expert </label> 
+       <br />
+
+        <input type="submit" value="Add Blog" />
+      </form>
+    </div>
+    <div id="authContainer" style="display: none;">
+      <h3>Register</h3>
+      <form id="register-form">
+        <label>
+          Full Name
+          <input
+            type="text"
+            value="Bilal"
+            required
+            placeholder="Full Name"
+            id="fullname"
+          />
+        </label>
+        <br />
+        <label>
+          Email
+          <input
+            type="email"
+            value="attari@gmail.com"
+            required
+            placeholder="Email"
+            id="email"
+          />
+        </label>
+        <br />
+        <label>
+          Password
+          <input
+            type="password"
+            required
+            value="123456"
+            placeholder="password"
+            id="password"
+          />
+        </label>
+        <br />
+        <input type="submit" value="Register" />
+      </form>
+
+      <h3>Login</h3>
+      <form id="login-form">
+        <label>
+          Email
+          <input
+            type="email"
+            value="attari@gmail.com"
+            required
+            placeholder="Email"
+            id="email"
+          />
+        </label>
+        <br />
+        <label>
+          Password
+          <input
+            type="password"
+            required
+            value="123456"
+            placeholder="password"
+            id="password"
+          />
+        </label>
+        <br />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
